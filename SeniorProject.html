@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Algorithms </title>
+</head>
+<body> 
+</body>
+<style>
+    h1{text-align: right;}
+</style>
+<p>The shortest path in any situation after checking all values and finding the smallest amount per vertex.
+    Similar to Dijkstra’s Shortest Path Algorithm in that the goal is to find the shortest distance one can travel from going to the starting node to the target node and Greedy Best-First-Search’s idea to only follow the shortest paths.
+    f(n)=g(n)+h(n)
+    Where g(n) is the sum of all the nodes that have been touch since the start.
+    h(n) is the heuristic value that is the estimated value of the entire travel.
+    </p>
+
+    <p>
+    Known as depth first because it searches for the deepest node first. 
+Uses a stack to remember to get to the next vertex.
+Goes through every vertex and must backtrack 
+1. Go to adjacent unvisited vertex, mark it as visited and push it into the stack.
+2. If none are found, pop up a vertex.
+3. Repeat 1 and 2 until the stack’s empty.
+
+</p>
+
+<p>
+    Queue used to remember to search the next vertex and when a dead end occurs a new search is done again.
+    1. Go to adjacent unvisited vertex, mark it as visited and insert into the queue.
+    2. If none are found, remove the first vertex.
+    3. Repeat 1 and 2 until the queue is empty.
+
+</p>
+</html>
