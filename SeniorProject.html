@@ -2,15 +2,73 @@
 <html>
 <head>
    <title>Pathfinding Algorithm Visualizer</title>
-	<style>
+   <meta name="viewport" content="width=device-width, initial-scale=1">	
+<style>
 div {
    border: dotted 1pt black;
    padding: 0px;
    margin: 90px 20px;
 }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+tr{
+    background-color: white;
+}
 </style>
-
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,6 +82,31 @@ Algorithms: A*,Depth First,Bredth First
 </h1>
 <div class="container">
     <h2>Pathfinding Algorithms</h2>            
+    <!-- Top navigation 
+<div class="topnav">
+
+     Centered link
+    <div class="topnav-centered">
+      <a href="#home" class="active">Home</a>
+    </div>
+    
+     Left-aligned links (default) 
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    
+    Right-aligned links 
+    <div class="topnav-right">
+      <a href="#search">Search</a>
+      <a href="#about">About</a>
+    </div>
+    
+  </div>
+  
+  <div style="padding-left:16px">
+    <h2>Responsive Top Navigation with Centered and Right-Aligned Links</h2>
+    <p>Resize the browser window to see the responsive effect.</p>
+  </div>
+-->
     <table class="table table-hover">
       <thead>
         <tr>
@@ -34,7 +117,7 @@ Algorithms: A*,Depth First,Bredth First
       <tbody>
         <tr>
           <td><iframe width="420" height="315"
-            src="https://www.youtube.com/watch?v=ySN5Wnu88nE&ab_channel=Computerphile">
+            src="https://www.youtube.com/embed/ySN5Wnu88nE">
             </iframe></td>
           <td>The shortest path in any situation after checking all values and finding the smallest amount per vertex.
             Similar to Dijkstra’s Shortest Path Algorithm in that the goal is to find the shortest distance one can travel from going to the starting node to the target node and Greedy Best-First-Search’s idea to only follow the shortest paths.
@@ -43,8 +126,8 @@ Algorithms: A*,Depth First,Bredth First
             h(n) is the heuristic value that is the estimated value of the entire travel.</td>
         </tr>
         <tr>
-          <td><iframe width="420" height="315"
-            src="https://https://www.youtube.com/watch?v=7fujbpJ0LB4&ab_channel=WilliamFiset">
+            <td><iframe width="420" height="315"
+            src="https://www.youtube.com/embed/7fujbpJ0LB4">
             </iframe></td>
           <td>Known as depth first because it searches for the deepest node first. 
             Uses a stack to remember to get to the next vertex.
@@ -55,7 +138,7 @@ Algorithms: A*,Depth First,Bredth First
         </tr>
         <tr>
           <td><iframe width="420" height="315"
-            src="https://www.youtube.com/watch?v=oDqjPvD54Ss&ab_channel=WilliamFiset">
+            src="https://www.youtube.com/embed/oDqjPvD54Ss">
             </iframe></td>
           <td>Queue used to remember to search the next vertex and when a dead end occurs a new search is done again.
             1. Go to adjacent unvisited vertex, mark it as visited and insert into the queue.
