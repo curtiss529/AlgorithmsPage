@@ -2,8 +2,11 @@
 <html>
 <head>
    <title>Pathfinding Algorithm Visualizer</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">	
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+td{
+  font-size: bold;
+}
 div {
    border: dotted 1pt black;
    padding: 0px;
@@ -23,11 +26,9 @@ ul {
   overflow: hidden;
   background-color: #333;
 }
-
 li {
   float: left;
 }
-
 li a {
   display: block;
   color: white;
@@ -35,19 +36,19 @@ li a {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 li a:hover {
   background-color: #111;
 }
+
 </style>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+ 
 </head>
-<body style="background-image:url('Grid.jpg');">
+<body style="background-image:url('images/Grid.jpg');">
 <h1>
 Algorithms: A*,Depth First,Bredth First
 </h1>
@@ -70,31 +71,40 @@ Algorithms: A*,Depth First,Bredth First
           <td><iframe width="420" height="315"
             src="https://www.youtube.com/embed/ySN5Wnu88nE">
             </iframe></td>
-          <td>The shortest path in any situation after checking all values and finding the smallest amount per vertex.
-            Similar to Dijkstra’s Shortest Path Algorithm in that the goal is to find the shortest distance one can travel from going to the starting node to the target node and Greedy Best-First-Search’s idea to only follow the shortest paths.
-            f(n)=g(n)+h(n)
-            Where g(n) is the sum of all the nodes that have been touch since the start.
-            h(n) is the heuristic value that is the estimated value of the entire travel.</td>
+            <td>The shortest path in any situation after checking all values and finding the smallest amount per vertex.
+              <br>1. f(n)=g(n)+h(n)
+              <br>2. Where g(n) is the sum of all the nodes that have been touch since the start.
+              <br>3. h(n) is the heuristic value that is the estimated value of the entire travel.</td>
         </tr>
+        <tr>
+          <td><iframe width="420" height="315"
+            src="https://www.youtube.com/embed/GazC3A4OQTE">
+            </iframe></td>
+          <td>Find the shortest path between nodes in a graph                                                                            
+           <br> 1. Create your set to prepare your output
+           <br>2. Assign a distance for each vertice in the graph
+           <br>3. While the created set doesn’t have all the vertices the lowest value for each will be scanned and added to the set
+            </td>
+          </tr>
         <tr>
             <td><iframe width="420" height="315"
             src="https://www.youtube.com/embed/7fujbpJ0LB4">
             </iframe></td>
-          <td>Known as depth first because it searches for the deepest node first. 
+            <td>Known as depth first because it searches for the deepest node first.
             Uses a stack to remember to get to the next vertex.
-            Goes through every vertex and must backtrack 
-            1. Go to adjacent unvisited vertex, mark it as visited and push it into the stack.
-            2. If none are found, pop up a vertex.
-            3. Repeat 1 and 2 until the stack’s empty.</td>
+            Goes through every vertex and must backtrack
+            <br>1. Go to adjacent unvisited vertex, mark it as visited and push it into the stack.
+            <br>2. If none are found, pop up a vertex.
+            <br>3. Repeat 1 and 2 until the stack’s empty.</td>
         </tr>
         <tr>
-          <td><iframe width="420" height="315"
+           <td><iframe width="420" height="315"
             src="https://www.youtube.com/embed/oDqjPvD54Ss">
             </iframe></td>
-          <td>Queue used to remember to search the next vertex and when a dead end occurs a new search is done again.
-            1. Go to adjacent unvisited vertex, mark it as visited and insert into the queue.
-            2. If none are found, remove the first vertex.
-            3. Repeat 1 and 2 until the queue is empty.</td>
+            <td>Queue used to remember to search the next vertex and when a dead end occurs a new search is done again.
+              <br>1. Go to adjacent unvisited vertex, mark it as visited and insert into the queue.
+              <br>2. If none are found, remove the first vertex.
+              <br>3. Repeat 1 and 2 until the queue is empty.</td>
         </tr>
       </tbody>
     </table>
@@ -105,4 +115,5 @@ Algorithms: A*,Depth First,Bredth First
     </p>
   </footer>
 </html>
+
    
