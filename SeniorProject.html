@@ -4,9 +4,6 @@
    <title>Pathfinding Algorithm Visualizer</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-td{
-  font-size: bold;
-}
 div {
    border: dotted 1pt black;
    padding: 0px;
@@ -18,6 +15,8 @@ body {
 }
 tr{
     background-color: rgb(121, 224, 231);
+    font:bold;
+    font-size:14px;
 }
 ul {
   list-style-type: none;
@@ -39,18 +38,31 @@ li a {
 li a:hover {
   background-color: #111;
 }
-
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+button{
+  padding: 20px 20px;
+}
 </style>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- 
 </head>
+<script type="text/javascript">
+  var TableBackgroundNormalColor = "rgb(121, 224, 231)";
+  var TableBackgroundMouseoverColor = "rgb(250, 128, 128)";
+  function ChangeBackgroundColor(row) { row.style.backgroundColor = TableBackgroundMouseoverColor; }
+  function RestoreBackgroundColor(row) { row.style.backgroundColor = TableBackgroundNormalColor; }
+  </script>  
 <body style="background-image:url('images/Grid.jpg');">
 <h1>
-Algorithms: A*,Depth First,Bredth First
+Algorithms: A*,Dijkstra's Algorithm,Depth First,Breadth First
 </h1>
 <ul>
   <li><a class="active" href="#home">Home</a></li>
@@ -64,20 +76,21 @@ Algorithms: A*,Depth First,Bredth First
         <tr>
           <th>Video</th>
           <th>Information</th>
+          <th>Button</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td><iframe width="420" height="315"
+      <tr onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+          <td style="font-size: x-large; font: bolder;">A* Algorithm<iframe width="420" height="315"
             src="https://www.youtube.com/embed/ySN5Wnu88nE">
             </iframe></td>
-            <td>The shortest path in any situation after checking all values and finding the smallest amount per vertex.
+            <td style="font:bolder;">The shortest path in any situation after checking all values and finding the smallest amount per vertex.
               <br>1. f(n)=g(n)+h(n)
               <br>2. Where g(n) is the sum of all the nodes that have been touch since the start.
               <br>3. h(n) is the heuristic value that is the estimated value of the entire travel.</td>
-        </tr>
-        <tr>
-          <td><iframe width="420" height="315"
+            <td> <button>A Star</button> </td>
+            </tr>
+        <tr  onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+          <td  style="font-size: x-large; font: bolder;">Dijkstra's Algorithm<iframe width="420" height="315"
             src="https://www.youtube.com/embed/GazC3A4OQTE">
             </iframe></td>
           <td>Find the shortest path between nodes in a graph                                                                            
@@ -85,9 +98,10 @@ Algorithms: A*,Depth First,Bredth First
            <br>2. Assign a distance for each vertice in the graph
            <br>3. While the created set doesn’t have all the vertices the lowest value for each will be scanned and added to the set
             </td>
+            <td> <button>Dijkstra's</button> </td>
           </tr>
-        <tr>
-            <td><iframe width="420" height="315"
+        <tr  onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+            <td  style="font-size: x-large; font: bolder;">Depth First Algorithm<iframe width="420" height="315"
             src="https://www.youtube.com/embed/7fujbpJ0LB4">
             </iframe></td>
             <td>Known as depth first because it searches for the deepest node first.
@@ -96,21 +110,22 @@ Algorithms: A*,Depth First,Bredth First
             <br>1. Go to adjacent unvisited vertex, mark it as visited and push it into the stack.
             <br>2. If none are found, pop up a vertex.
             <br>3. Repeat 1 and 2 until the stack’s empty.</td>
-        </tr>
-        <tr>
-           <td><iframe width="420" height="315"
+            <td> <button>Depth</button> </td>  
+          </tr>
+        <tr  onmouseover="ChangeBackgroundColor(this)" onmouseout="RestoreBackgroundColor(this)">
+           <td  style="font-size: x-large; font: bolder;">Breadth First Algorithm<iframe width="420" height="315"
             src="https://www.youtube.com/embed/oDqjPvD54Ss">
             </iframe></td>
             <td>Queue used to remember to search the next vertex and when a dead end occurs a new search is done again.
               <br>1. Go to adjacent unvisited vertex, mark it as visited and insert into the queue.
               <br>2. If none are found, remove the first vertex.
               <br>3. Repeat 1 and 2 until the queue is empty.</td>
-        </tr>
+              <td> <button>Breadth</button> </td>
+          </tr>
       </tbody>
     </table>
-  </div>
 </body>
-<footer style="background-color:black">
+<footer style="background-color:black;">
     <p style="color:white">By Curtiss Stacey, Gerardo Rodriguez, and Kristine Veneles  
     </p>
   </footer>
